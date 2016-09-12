@@ -29,6 +29,9 @@ android {
         multiDexEnabled true
         // 默认是umeng的渠道
         manifestPlaceholders = [UMENG_CHANNEL_VALUE: "umeng"]
+
+        // API服务器URL
+        buildConfigField 'String', 'API_SERVER_URL', '"http://gank.io/api/"'
     }
 
     buildTypes {
