@@ -48,14 +48,6 @@
     public void set*(...);
 }
 
-# Glide框架混淆设置
--keep public class * implements com.bumptech.glide.module.GlideModule
--keep public enum com.bumptech.glide.load.resource.bitmap.ImageHeaderParser$** {
-  **[] $VALUES;
-  public *;
-}
-#-keepresourcexmlelements manifest/application/meta-data@value=GlideModule
-
 # Butter Knife 混淆
 -keep public class * implements butterknife.Unbinder { public <init>(...); }
 -keep class butterknife.*
@@ -102,3 +94,11 @@
 }
 -dontwarn rx.internal.util.unsafe.**
 -keep class rx.internal.util.unsafe.** { *;}
+
+# Glide
+-keep public class * implements com.bumptech.glide.module.GlideModule
+-keep public enum com.bumptech.glide.load.resource.bitmap.ImageHeaderParser$** {
+  **[] $VALUES;
+  public *;
+}
+-keepresourcexmlelements manifest/application/meta-data@value=GlideModule
