@@ -1,7 +1,7 @@
 package com.huchiwei.gankessence.core.cache;
 
 import com.google.gson.Gson;
-import com.huchiwei.gankessence.core.util.AppUtil;
+import com.huchiwei.gankessence.core.utils.AppUtil;
 
 import org.json.JSONObject;
 

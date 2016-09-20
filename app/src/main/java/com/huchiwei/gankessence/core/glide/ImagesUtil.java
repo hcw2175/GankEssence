@@ -10,7 +10,7 @@ import com.bumptech.glide.load.resource.bitmap.BitmapTransformation;
 import com.huchiwei.gankessence.R;
 import com.huchiwei.gankessence.core.glide.transform.CircleImageTransform;
 import com.huchiwei.gankessence.core.glide.transform.RoundedCornersTransformation;
-import com.huchiwei.gankessence.core.util.ResourceUtil;
+import com.huchiwei.gankessence.core.utils.ResourceUtil;
 
 /**
  * 图片辅助类

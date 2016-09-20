@@ -8,8 +8,8 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonParseException;
 import com.huchiwei.gankessence.BuildConfig;
 import com.huchiwei.gankessence.R;
-import com.huchiwei.gankessence.core.util.AppUtil;
-import com.huchiwei.gankessence.core.util.ResourceUtil;
+import com.huchiwei.gankessence.core.utils.AppUtil;
+import com.huchiwei.gankessence.core.utils.ResourceUtil;
 
 import java.io.File;
 import java.io.IOException;
@@ -29,14 +29,14 @@ import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 /**
- * Retrofit2工具类
+ * Retrofit2辅助类
  *
  * @author huchiwei
  * @version 1.0.0
  */
-public class RetrofitUtil {
+public class RetrofitHelper {
 
-    private static Retrofit retrofitInstance = null;
+    private volatile static Retrofit retrofitInstance = null;
 
     /**
      * 创建Retrofit请求Api

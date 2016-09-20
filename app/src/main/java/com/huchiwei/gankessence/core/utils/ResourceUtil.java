@@ -1,4 +1,4 @@
-package com.huchiwei.gankessence.core.util;
+package com.huchiwei.gankessence.core.utils;
 
 import android.support.v4.content.ContextCompat;
 

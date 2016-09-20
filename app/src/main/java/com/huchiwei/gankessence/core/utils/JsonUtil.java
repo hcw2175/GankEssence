@@ -4,7 +4,7 @@
  *
  * Created on 2016-08-04
  */
-package com.huchiwei.gankessence.core.util;
+package com.huchiwei.gankessence.core.utils;
 
 import com.google.gson.Gson;
 

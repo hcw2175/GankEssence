@@ -4,7 +4,7 @@
  *
  * Created on 2016-07-25
  */
-package com.huchiwei.gankessence.core.util;
+package com.huchiwei.gankessence.core.utils;
 
 import com.orhanobut.logger.Logger;
 

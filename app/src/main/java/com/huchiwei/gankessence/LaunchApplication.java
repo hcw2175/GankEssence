@@ -2,8 +2,8 @@ package com.huchiwei.gankessence;
 
 import android.app.Application;
 
-import com.huchiwei.gankessence.core.util.AppUtil;
-import com.huchiwei.gankessence.core.util.ResourceUtil;
+import com.huchiwei.gankessence.core.utils.AppUtil;
+import com.huchiwei.gankessence.core.utils.ResourceUtil;
 import com.orhanobut.logger.LogLevel;
 import com.orhanobut.logger.Logger;
 

@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">干货精选</string>
     <string name="app_name_en">GankEssence</string>
+
+    <!-- 异常信息 -->
+    <string name="err_default">数据加载异常</string>
+    <string name="err_default_sorry">抱歉,系统发生未知异常</string>
+    <string name="err_network">Oops...网络好像不给力哦！</string>
 </resources>
