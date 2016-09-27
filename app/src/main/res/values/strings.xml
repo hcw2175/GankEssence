@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">干货精选</string>
     <string name="app_name_en">GankEssence</string>
+    <string name="app_slogan">每日进步一点点</string>
 
     <!-- 异常信息 -->
     <string name="err_default">数据加载异常</string>

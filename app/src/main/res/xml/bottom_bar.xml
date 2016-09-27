@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tabs>
+    <tab
+        id="@+id/nav_home"
+        icon="@drawable/nav_home"
+        title="首页" />
+    <tab
+        id="@+id/nav_discover"
+        icon="@drawable/nav_discover"
+        title="发现" />
+    <tab
+        id="@+id/nav_girl"
+        icon="@drawable/nav_girl"
+        title="妹纸" />
+    <tab
+        id="@+id/nav_share"
+        icon="@drawable/nav_share"
+        title="投稿" />
+</tabs>

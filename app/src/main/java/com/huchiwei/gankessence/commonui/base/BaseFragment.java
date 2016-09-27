@@ -1,10 +1,11 @@
 package com.huchiwei.gankessence.commonui.base;
 
 import android.annotation.TargetApi;
-import android.app.Fragment;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.app.Fragment;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
@@ -56,21 +57,27 @@ public abstract class BaseFragment extends Fragment {
 
     // ======================================================
     // 设置Toolbar ===========================================
-    public void setToolBar(int toolBarId){
-        mToolbar = (Toolbar) getView().findViewById(toolBarId);
+    public void setToolBar(View view, int toolBarId){
+        mToolbar = (Toolbar) view.findViewById(toolBarId);
         if(null != mToolbar && null != mAppCompatActivity){
             mAppCompatActivity.setSupportActionBar(mToolbar);
-            mAppCompatActivity.getSupportActionBar().setDisplayShowTitleEnabled(false);
 
-            initWindow();
-        }
-    }
+            ActionBar actionBar = mAppCompatActivity.getSupportActionBar();
+            if(null !=  actionBar){
+                // 获取并设置标题, 0表示不设置标题
+                int titleResourceId = getToolbarTitle();
+                if(titleResourceId > 0){
+                    actionBar.setTitle(titleResourceId);
+                } else {
+                    actionBar.setTitle(null);
+                }
+            }
+            //mAppCompatActivity.getSupportActionBar().setDisplayShowTitleEnabled(false);
 
-    @TargetApi(19)
-    private void initWindow(){
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-            WindowManager.LayoutParams localLayoutParams = mAppCompatActivity.getWindow().getAttributes();
-            localLayoutParams.flags = (WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS | localLayoutParams.flags);
+            // 设置透明状态栏
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+                mAppCompatActivity.getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+            }
         }
     }
 
@@ -106,6 +113,11 @@ public abstract class BaseFragment extends Fragment {
         }
     }
 
+    // ==================================================================
+    // 重载方法 ==========================================================
+    protected int getToolbarTitle(){
+        return R.string.app_name;
+    }
 
     /**
      * 获取fragment的View layoutId

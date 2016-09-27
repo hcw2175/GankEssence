@@ -98,7 +98,20 @@ public class CacheUtil {
         return getInstance().getAsObject(key);
     }
 
+    /**
+     * 移除缓存
+     * @param key key
+     */
     public static void remove(String key){
         getInstance().remove(key);
+    }
+
+    /**
+     * 是否存在缓存
+     * @param key 缓存key
+     * @return 存在则true，否则为false
+     */
+    public static boolean hasKey(String key){
+        return null != getInstance().getAsObject(key);
     }
 }

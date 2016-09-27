@@ -4,6 +4,8 @@ import android.content.Context;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Build;
+import android.view.View;
+import android.view.Window;
 
 import com.huchiwei.gankessence.BuildConfig;
 import com.huchiwei.gankessence.LaunchApplication;
@@ -94,5 +96,13 @@ public class AppUtil {
     public static boolean isWifi(){
         NetworkInfo activeNetworkInfo = getNetworkInfo();
         return activeNetworkInfo != null && activeNetworkInfo.getType() == ConnectivityManager.TYPE_WIFI;
+    }
+
+    /**
+     * 隐藏虚拟导航栏
+     * @param window Android Window
+     */
+    public static void hideNavgationBar(Window window){
+        window.getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_HIDE_NAVIGATION);
     }
 }
